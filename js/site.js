@@ -6,9 +6,14 @@ function getValue(){
 
     let userString = document.getElementById("userString").value;
     
+    if (userString.length > 2 || userString.length === "         " ) {
     let revString = reverseString(userString);
     
     displayString(revString);
+    }
+    else {
+        alert("You must enter three or more characters!");
+    }
 }
 
 //Reverse the string

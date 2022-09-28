@@ -64,9 +64,14 @@ function getValue(){
 
     let userString = document.getElementById("userString").value;
     
+    if (userString.length > 2 || userString.length === "         " ) {
     let revString = reverseString(userString);
     
     displayString(revString);
+    }
+    else {
+        alert("You must enter three or more characters!");
+    }
 }
 
 //Reverse the string
@@ -102,7 +107,7 @@ function displayString(revString){
                     
                     <h5>1.) The Controller Function</h5>
                     <p>
-                       The foundation for the JavaScript behavior is laid out by the controller function. The revString variable declaration is utilized to reverse the user's input. I used displayString(revString) to display the reversed string to the user.
+                       The foundation for the JavaScript behavior is laid out by the controller function. The revString variable declaration is utilized to reverse the user's input. I used displayString(revString) to display the reversed string to the user. I also added an if-statement that ensures that the user enters a minimum of three characters to generate a reversed string. I could have also used regex for empty spaces instead of manually entering an empty string to the if-statement.
                     </p>
                     <br>
                     <h5>2.) The Logic Function</h5>
